@@ -17,10 +17,11 @@ class LoginData():
         self.email = email
 
 class EmployeeData():
-    def __init__(self, salary, tax, occupation, title):
+    def __init__(self, salary, tax, occupation, title, company):
         self.monthly_salary = salary - (salary * (tax / 100))
         self.occupation = occupation
-        self.title = title 
+        self.title = title
+        self.company = company
 
 class Node:
     def __init__(self, login_data, personal_data, emp_data):
