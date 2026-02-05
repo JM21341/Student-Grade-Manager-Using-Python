@@ -1,4 +1,4 @@
-class PersonalData:
+class PersonalData():
     def __init__(self, name, age, gender, birthdate, fb, ig, twt, linkedin):
         self.name = name
         self.age = age 
@@ -10,13 +10,13 @@ class PersonalData:
         self.linkedin = linkedin
         
 
-class LoginData:
+class LoginData():
     def __init__(self, username, password, email):
         self.username = username
         self.password = password
         self.email = email
 
-class EmployeeData:
+class EmployeeData():
     def __init__(self, salary, tax, occupation, title):
         self.monthly_salary = salary - (salary * (tax / 100))
         self.occupation = occupation
@@ -28,3 +28,17 @@ class Node:
         self.personal_data = personal_data
         self.employee_data = emp_data
         self.next = None 
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+    
+    def insert(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self_head = new_node
+            return
+        curr = self.head
+        while curr.next:
+            curr = curr.next
+        curr.next = new_node 
