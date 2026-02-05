@@ -8,8 +8,8 @@ def insertNode(head, data):
     else:
         curr = head
         # linked list traversal
-        while curr.Node.next is not None:
-            curr = curr.Node.next
+        while curr.next is not None:
+            curr = curr.next
         
         curr.next = new_node # sets the next node of the last node as the new node
 
